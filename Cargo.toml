@@ -1,9 +1,9 @@
-[package]
-name = "obscura"
-version = "0.1.0"
-edition = "2018"
+[workspace]
+members = [
+	"content/browser",
+	"content/renderer",
+	"obscura",
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-html5ever = "0.25.1"
+[profile.release]
+opt-level = 3
