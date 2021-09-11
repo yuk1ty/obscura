@@ -1,6 +1,6 @@
 /// https://fetch.spec.whatwg.org/#response
 #[derive(Clone)]
-struct Response {
+pub struct Response {
     // alternative to `type` on WHATWG spec because `type` is reserved word in Rust
     response_type: ResponseType,
     url: String,
@@ -14,7 +14,7 @@ struct Response {
 /// https://fetch.spec.whatwg.org/#responsetype
 #[allow(dead_code)]
 #[derive(Clone)]
-enum ResponseType {
+pub enum ResponseType {
     Basic,
     Cors,
     Default,

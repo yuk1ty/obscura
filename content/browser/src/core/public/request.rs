@@ -1,7 +1,7 @@
 /// https://fetch.spec.whatwg.org/#request-class
 #[allow(dead_code)]
 #[derive(Clone)]
-struct Request {
+pub struct Request {
     method: String,  // TODO
     url: String,     // TODO
     headers: String, // TODO
@@ -18,10 +18,16 @@ struct Request {
     abort_signal: AbortSignal, // TODO
 }
 
+/// gonna represents URL
+pub type RequestInfo = String;
+
+// TODO
+pub type RequestInit = String;
+
 /// https://fetch.spec.whatwg.org/#requestdestination
 #[allow(dead_code)]
 #[derive(Clone)]
-enum RequestDestination {
+pub enum RequestDestination {
     NonCategorized, // corresponds to ""
     Audio,
     AudioWorklet,
@@ -47,7 +53,7 @@ enum RequestDestination {
 /// https://w3c.github.io/webappsec-referrer-policy/#enumdef-referrerpolicy
 #[allow(dead_code)]
 #[derive(Clone)]
-enum ReferrerPolicy {
+pub enum ReferrerPolicy {
     NonCategorized, // corresponds to ""
     NoReferrer,
     NoReferrerWhenDowngrade,
@@ -62,7 +68,7 @@ enum ReferrerPolicy {
 /// https://fetch.spec.whatwg.org/#requestmode
 #[allow(dead_code)]
 #[derive(Clone)]
-enum RequestMode {
+pub enum RequestMode {
     Navigate,
     SameOrigin,
     NoCors,
@@ -72,7 +78,7 @@ enum RequestMode {
 /// https://fetch.spec.whatwg.org/#requestcredentials
 #[allow(dead_code)]
 #[derive(Clone)]
-enum RequestCredentials {
+pub enum RequestCredentials {
     Omit,
     SameOrigin,
     Include,
@@ -81,7 +87,7 @@ enum RequestCredentials {
 /// https://fetch.spec.whatwg.org/#requestcache
 #[allow(dead_code)]
 #[derive(Clone)]
-enum RequestCache {
+pub enum RequestCache {
     Default,
     NoStore,
     Reload,
@@ -93,7 +99,7 @@ enum RequestCache {
 /// https://fetch.spec.whatwg.org/#requestredirect
 #[allow(dead_code)]
 #[derive(Clone)]
-enum RequestRedirect {
+pub enum RequestRedirect {
     Follow,
     Error,
     Manual,
@@ -101,7 +107,7 @@ enum RequestRedirect {
 
 #[allow(dead_code)]
 #[derive(Clone)]
-struct AbortSignal {
+pub struct AbortSignal {
     aborted: bool,
 }
 
